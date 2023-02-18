@@ -1,3 +1,3 @@
-function htop --wraps=btm --description 'alias htop=btm'
+function htop --description 'view system info'
   btm $argv
 end

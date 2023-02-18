@@ -27,14 +27,15 @@ function fish_prompt
         printf '{%s} ' $screen_symbol
     end
 
-    #1: sudo active, 2: error will add more later
+    #NUMBER GUIDE: 1=sudo active, 2=error will add more later
     set -f heartsum 0
 
+    #sudo active. not sure if any distros will blow up on this one
     if sudo -vn 2>/dev/null
         set -f heartsum (math --scale=0 $heartsum + 1)
-        #set $prompt_string $fire_symbol
     end
 
+    #error exists. number is displayed on right prompt
     if test $last_command_status != 0 >/dev/null
         set -f heartsum (math --scale=0 $heartsum + 2)
     end

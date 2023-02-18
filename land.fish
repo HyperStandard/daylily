@@ -1,3 +1,6 @@
-function land --wraps='cd ~/nest' --description 'alias land cd ~/nest'
+function land --description 'caw caw!'
+  if not test -d ~/nest
+    mkdir ~/nest
+  end
   cd ~/nest $argv; 
 end
