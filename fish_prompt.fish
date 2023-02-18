@@ -45,13 +45,13 @@ function fish_prompt
     #doing it using the funny bit math
     switch $heartsum
         case 0 ''
-            set -f $prompt_string $regular_symbol
+            set -f prompt_string $regular_symbol
         case 1
-            set -f $prompt_string $fire_symbol
+            set -f prompt_string $fire_symbol
         case 2
-            set -f $prompt_string $error_symbol
+            set -f prompt_string $error_symbol
         case 3
-            set -f $prompt_string $firerror_symbol
+            set -f prompt_string $firerror_symbol
         case '*'
             #i dont know how you even got here
             set -f prompt_string 'error: \"glorp\" >'
